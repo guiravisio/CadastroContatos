@@ -85,3 +85,4 @@ D:\www\CadastroContatos\CadastroContatos\CadastroContatos\bin\Debug\net6.0\runti
 D:\www\CadastroContatos\CadastroContatos\CadastroContatos\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\www\CadastroContatos\CadastroContatos\CadastroContatos\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\www\CadastroContatos\CadastroContatos\CadastroContatos\obj\Debug\net6.0\CadastroContatos.csproj.CopyComplete
+D:\www\CadastroContatos\CadastroContatos\CadastroContatos\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutDeslogado.cshtml.rz.scp.css

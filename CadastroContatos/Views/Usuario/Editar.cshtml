@@ -1,15 +1,16 @@
 ﻿@using CadastroContatos.Enums;
 @model UsuarioModel
 @{
-    ViewData["Title"] = "Criar Usuario";
+    ViewData["Title"] = "Editar Usuario";
 }
 <div class="text-center">
  
-    <h1 class="display-4">Cadastrar novo usuário</h1>
+    <h1 class="display-4">Editar usuário</h1>
     
 </div>
 
-<form asp-controller="Usuario" asp-action="Criar" method="post">
+<form asp-controller="Usuario" asp-action="Editar" method="post">
+    <input type="hidden" asp-for="Id" />
     <div class="form-group">
       <label for="nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do usuário">
@@ -37,15 +38,10 @@
         @Html.ValidationMessageFor(x => x.Perfil)
     </div>
     <br />
-    <div class="form-group">
-        <label for="senha">Senha</label>
-        <input type="password" asp-for="Senha" class="form-control" placeholder="Digite a senha do usuário">
-        @Html.ValidationMessageFor(x => x.Senha)
-    </div>
-    <br />
+   
     <br />
     <div>
-      <button type="submit" class="btn btn-primary col-12">Adicionar</button>
+      <button type="submit" class="btn btn-primary col-12">Alterar</button>
     </div>
     <div>
       <a class="btn btn-secondary col-12" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>

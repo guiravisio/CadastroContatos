@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CadastroContatos.Models
 {
-    public class UsuarioModel
+    public class UsuarioSemSenhaModel
     {
         public int Id { get; set; }
 
@@ -19,20 +19,10 @@ namespace CadastroContatos.Models
         [EmailAddress(ErrorMessage = "Formato inválido de email, verifique a informação.")]
         public string Email { get; set; }
 
+
         [Required(ErrorMessage = "O perfil do usuário é de preenchimento obrigatório.")]
         public PerfilEnum? Perfil { get; set; }
 
-        [Required(ErrorMessage = "A senha do usuário é de preenchimento obrigatório.")]
-        public string Senha { get; set; }
-
-        public DateTime DataCadastro { get; set; }
-
-        public DateTime? DataAlteracao { get; set; }
-
-        public bool SenhaValida(string senha)
-        {
-            return Senha == senha;
-
-        }
+       
     }
 }

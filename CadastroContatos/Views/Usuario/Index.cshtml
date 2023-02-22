@@ -5,7 +5,7 @@
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Usuario" asp-action="Criar">Adicionar novo Usuário</a>
+        <a title="Adicionar contato" class="btn btn-primary btn-lg" role="button" asp-controller="Usuario" asp-action="Criar"><i class="bi bi-person-add"></i></a>
     </div>
     <br/>
     @if (TempData["MensagemSucesso"] != null)
@@ -26,14 +26,14 @@
     
     
     <h1 class="display-4">Listagem de Usuários</h1>
-    <table class="table" id="table-usuario">
+    <table class="table" id="table-usuarios">
     <thead>
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Login</th>
             <th scope="col">Nome</th>
             <th scope="col">E-mail</th>
-            <th scope="col">Data de Cadastro</th>
+            <th scope="col">Perfil</th>
             <th scope="col"></th>
         </tr>
     </thead>
@@ -48,11 +48,11 @@
                         <td>@usuario.Login</td>
                         <td>@usuario.Nome</td>
                         <td>@usuario.Email</td>
-                        <td>@usuario.DataCadastro</td>
+                        <td>@(usuario.Perfil == CadastroContatos.Enums.PerfilEnum.Admin ? "Admin" : "Padrão")</td>
                         <td>
-                            <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Editar">Editar</a>
-                                <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="ApagarConfirmacao">Apagar</a>
+                            <div >
+                                <a title=Editar class="btn btn-primary" role ="button" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Editar"><i class="bi bi-pencil" ></i></a>
+                                <a title=Apagar class="btn btn-danger"  role="button" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="ApagarConfirmacao"><i class="bi bi-trash"></i></a>
                             </div>
                         </td>
                     </tr>
